@@ -48,4 +48,4 @@ gaitober" => "gato"
 ### Autor:
 Diego Armando Banegas.
 
-Puedes acceder al resultado final de la página desde <a href="https://diegoabanegas.github.io/portfolio/" target="_blank">**aquí**</b></a>.
+Puedes acceder al resultado final de la página desde <a href="https://diegoabanegas.github.io/portfolio/">**aquí**</b></a>.
