@@ -65,7 +65,7 @@ main{
 
 /*SECTION 1*/
 main .seccionUno{
-    flex-basis:62%;
+    flex-basis:70%;
     display: flex;
     flex-direction: column;
     padding-top: 5rem;
@@ -134,7 +134,7 @@ main .seccionDos{
     box-shadow: 0px 3rem 4rem -1rem rgba(0, 0, 0, 0.08);
     border-radius: 4rem;
     padding: 4rem;
-    flex-basis:38%;    
+    flex-basis:30%;    
 }
 .resultado{
     height: 100%;
