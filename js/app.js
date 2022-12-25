@@ -25,7 +25,7 @@
     };   
 
     function encriptar(){
-        let arr = txtEncriptar.value.split('');
+        let arr = txtEncriptar.value.toLowerCase().split('');
         for (let i = 0; i < arr.length; i++) {
             const letraSeleccionada = arr[i]; 
             const vocales = {
@@ -49,7 +49,7 @@
     };
 
     function desencriptar(){        
-        let arr = txtEncriptar.value.split('');
+        let arr = txtEncriptar.value.toLowerCase().split('');
         for (let i = 0; i < arr.length; i++) {
             let cont = i + 1;
             const letraSeleccionada = arr[i]; 
