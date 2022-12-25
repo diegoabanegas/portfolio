@@ -71,6 +71,9 @@
                     : letraDefault;
         arreglo.push(letra)        
         }
+
+        resultado.classList.contains('no-visible') ? aparecer() : ''
+
         txtResultado.value = arreglo.join('');
 
         arreglo = [];
