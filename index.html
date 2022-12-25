@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Encriptador y desencriptador de texto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilosApp.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <figure class="logo">
+                <img src="img/logo.svg" alt="">
+            </figure>
+        </header>
+        <main>
+            <!--SECCION 1-->
+            <section class="seccionUno">
+                <!--Input o textarea-->
+                <textarea id="txtEncriptar" placeholder="Ingrese el texto aquí." autofocus="true"></textarea>
+                <!--ADVERTENCIA-->
+                <div class="advertencia">
+                    <img src="img/advertencia.svg" alt="">
+                    <p>Solo letras minúsculas y sin acentos.</p>
+                </div>        
+                <!--BOTONES-->
+                <div class="botones">
+                    <button type="submit" id="btnEncriptar" class="boton btnEncriptar">Encriptar!</button>
+                    <button type="submit" id="btnDesencriptar" class="boton btnDesencriptar">Desencriptar!</button>
+                </div>    
+            </section>
+
+            <!--SECCION 2-->
+            <section class="seccionDos">
+                <div id="resultado" class="no-visible resultado">
+                    <textarea id="txtResultado"></textarea>
+                    <div class="botones">
+                        <button type="button" id="btnCopiar" class="boton btnCopiar">Copiar</button>
+                    </div>
+                </div>
+                <div id="noResultado" class="no-resultado">
+                    <img class="imgResultado" src="img/grafico.svg" alt="">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </section>    
+        </main>
+    </div>
+    <footer>
+        <a href="#">&copy; Web Designer &#8594; Diego Armando Banegas</a>
+    </footer>    
+    <script src="js/app.js"></script>
+</body>
+</html>

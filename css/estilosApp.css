@@ -1,0 +1,237 @@
+:root{
+    --darkblue100:#609ED4;
+    --darkblue200:#356EA9;
+    --darkblue300:#0A3871;/*texto*/
+    --darkblue400:#072B61;
+    --darkblue500:#052051;
+    --lightblue100:#F3F5FC;/*fondo*/
+    --lightblue200:#EFF1FA;
+    --lightblue300:#E9ECF8;
+    --lightblue400:#AAB2D5;
+    --lightblue500:#757FB2;
+    --gray100:#CED4DA;
+    --gray200:#ADB5BD;
+    --gray300:#868E96;
+    --gray400:#495057;
+    --gray500:#343A40;
+}
+/*GENERALES*/
+html{    
+    font-size: 8px;
+}
+body, div, main,section, footer{
+    box-sizing: border-box;
+}
+body, textarea, button{
+    font-family:'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+}
+/*FIN GRALES*/
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: var(--lightblue100);
+    color:var(--darkblue300);       
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.contenedor{
+    width: 100%;
+    min-width: 318px;
+    max-width: 1900px;
+    margin: 0 auto;
+    height: calc(100% - 2.5rem);
+    padding: 5rem 5rem 3rem 5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    align-content: flex-start;    
+}
+header .logo{
+    max-width: 15rem;
+    min-width: 10rem;
+    text-align: center;
+}
+main{
+    flex-basis: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: no-wrap;
+    gap: 2rem;
+}
+
+/*SECTION 1*/
+main .seccionUno{
+    flex-basis:62%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+textarea{
+    flex-basis: 100%;
+    background: transparent;
+    border: none;
+    resize: none;
+    outline: none;
+    text-transform: lowercase;
+    padding: 0 1rem;
+
+}
+textarea::placeholder{
+    text-transform: none;
+    font-size: 3rem;
+    font-weight: 400;
+    color:var(--gray200);
+}
+.advertencia{
+    flex-basis: 3rem;
+    color: var(--gray400);
+    display: flex;    
+    gap: 1rem;
+    padding: 0.25rem;   
+}
+.advertencia img{
+    margin-top: -0.5rem;
+}
+.advertencia p{
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+    /*BOTONES GRAL*/
+.botones{
+    flex-basis: 8rem;
+    display: flex;
+    gap: 3rem;    
+}
+.boton{
+    flex-basis: 35rem;
+    height: 8rem;
+    border-radius: 3rem;
+    line-height: 50%;
+    user-select: none;    
+}
+        /*BOTONES INDIVIDUALES*/
+.btnEncriptar{
+    background: var(--darkblue300);
+    color: white;
+    border: 1px solid var(--darkblue400);
+}
+.btnDesencriptar{
+    background: #D8DFE8;
+    border: 1px solid var(--darkblue300);
+    color: var(--darkblue300);
+}
+
+/*SECCION 2*/
+main .seccionDos{
+    background: white;
+    box-shadow: 0px 3rem 4rem -1rem rgba(0, 0, 0, 0.08);
+    border-radius: 4rem;
+    padding: 4rem;
+    flex-basis:38%;    
+}
+.resultado{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*grid-template-rows: 1fr 8rem;*/
+}
+
+.no-resultado{
+    height: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 2rem;
+    
+}
+.no-resultado h2{
+    font-size: 4.5rem;
+    color: var(--gray500);
+}
+.no-resultado p{
+    color: var(--gray400);
+    font-weight: 300;
+}
+.btnCopiar{
+    background: white;
+    border: 1px solid var(--gray100);
+    margin: 0 auto;
+}
+.opacidad{
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.no-visible{    
+    display: none;    
+}
+
+/*FOOTER*/
+footer{
+    font-family:monospace;
+    font-weight: 100;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    line-height: 1.5;
+    position: fixed;
+    bottom: 0;
+}
+footer a{
+    border-top: 1px solid var(--lightblue300);
+    display: block;
+    color: var(--lightblue300);
+    font-size: 1.3rem;
+    margin: 0 auto;
+    text-decoration: none;
+    width: 50%;
+    transition: all 500ms;    
+}
+footer a:hover{
+    border-top: 1px solid #04fa8b;
+    color: #04fa8b;
+    transition: all 500ms;
+}
+/*FIN DEL FOOTER*/
+
+@media only screen and (max-width: 1200px){
+    .contenedor{
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width: 920px){
+    .contenedor{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }    
+    main{
+        height: calc(100% - 7rem);
+        flex-wrap: wrap;
+        gap: 0.5rem;   
+    }
+    main .seccionUno, main .seccionDos{
+        flex-basis: 100%;
+        padding: 0.5rem;
+    }
+    .imgResultado{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+    .botones{
+        flex-basis: 6rem;
+        gap: 2rem;    
+    }
+    .boton{
+        font-size: 2.5rem;
+        flex-basis: 30rem;
+        height: 6rem;
+        border-radius: 2rem; 
+    }
+}
