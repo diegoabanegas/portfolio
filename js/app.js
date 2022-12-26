@@ -30,10 +30,15 @@
             const letraSeleccionada = arr[i]; 
             const vocales = {
                 a : 'ai',
+               'á': 'ai',
                 e : 'enter',
+               'é' : 'enter',
                 i : 'imes',
+               'í' : 'imes',
                 o : 'ober',
-                u : 'ufat'
+               'ó' : 'ober',
+                u : 'ufat',
+               'ú' : 'ufat'
         }        
         const letraDefault = letraSeleccionada;
         const letra = vocales[letraSeleccionada] || letraDefault;
