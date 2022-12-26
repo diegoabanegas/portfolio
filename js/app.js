@@ -25,6 +25,11 @@
     };   
 
     function encriptar(){
+        if(txtEncriptar.value == ''){
+            resultado.classList.contains('no-visible') ? aparecer() : ''
+            txtEncriptar.focus();
+            return txtResultado.value = 'Debes agregar un texto para poder Encriptar!';
+        }
         let arr = txtEncriptar.value.toLowerCase().split('');
         for (let i = 0; i < arr.length; i++) {
             const letraSeleccionada = arr[i]; 
@@ -53,7 +58,12 @@
         txtEncriptar.value = '';
     };
 
-    function desencriptar(){        
+    function desencriptar(){      
+        if(txtEncriptar.value == ''){
+            resultado.classList.contains('no-visible') ? aparecer() : ''
+            txtEncriptar.focus();
+            return txtResultado.value = 'Debes agregar un texto encriptado para poder Desencriptar!';
+        }  
         let arr = txtEncriptar.value.toLowerCase().split('');
         for (let i = 0; i < arr.length; i++) {
             let cont = i + 1;
@@ -95,4 +105,5 @@
                 
         //limpiarTextarea('txtResultado');
         txtResultado.value = '';
+        txtEncriptar.focus();
     };
