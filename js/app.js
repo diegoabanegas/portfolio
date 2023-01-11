@@ -7,6 +7,7 @@
     const txtResultado = $('txtResultado');
     const resultado = $('resultado');
     const noResultado = $('noResultado');
+    const expR = /[^a-z-\d\s,.]/g;
     let arreglo = [];
     
     /*EVENTO CLICK*/
@@ -29,7 +30,7 @@
             resultado.classList.contains('no-visible') ? aparecer() : ''
             txtEncriptar.focus();
             return txtResultado.value = 'Debes agregar un texto para poder Encriptar!';
-        }
+        }        
         let arr = txtEncriptar.value.toLowerCase().split('');
         for (let i = 0; i < arr.length; i++) {
             const letraSeleccionada = arr[i]; 
@@ -53,7 +54,7 @@
         resultado.classList.contains('no-visible') ? aparecer() : ''
 
         txtResultado.value = arreglo.join('');
-
+        txtResultado.value = txtResultado.value.replace(expR, '');
         arreglo = [];
         txtEncriptar.value = '';
     };
@@ -90,7 +91,7 @@
         resultado.classList.contains('no-visible') ? aparecer() : ''
 
         txtResultado.value = arreglo.join('');
-
+        txtResultado.value = txtResultado.value.replace(expR, '');
         arreglo = [];
         txtEncriptar.value = '';
     };
