@@ -76,8 +76,7 @@ textarea{
     background: transparent;
     border: none;
     resize: none;
-    outline: none;
-    text-transform: lowercase;
+    outline: none;    
     padding: 0 1rem;
 
 }
@@ -86,6 +85,9 @@ textarea::placeholder{
     font-size: 3rem;
     font-weight: 400;
     color:var(--gray200);
+}
+.txtEncriptar{
+    text-transform: lowercase;
 }
 .advertencia{
     flex-basis: 3rem;
@@ -140,7 +142,6 @@ main .seccionDos{
     height: 100%;
     display: flex;
     flex-direction: column;
-    /*grid-template-rows: 1fr 8rem;*/
 }
 
 .no-resultado{
@@ -168,8 +169,12 @@ main .seccionDos{
     opacity: 0;
     transition: all 0.5s ease-in;
 }
+.aparecer{
+    opacity: 1;
+    transition: all 0.5s ease-in;
+}
 .no-visible{    
-    display: none;    
+    display: none;
 }
 
 /*FOOTER*/
@@ -211,7 +216,7 @@ footer a:hover{
         flex-direction: row;
     }    
     main{
-        height: calc(100% - 7rem);
+        height: calc(100% - 8rem);
         flex-wrap: wrap;
         gap: 0.5rem;   
     }
