@@ -35,7 +35,7 @@ function comprobacion(mensaje){
         txtEncriptar.value = ''
         return retorno = null
     }
-    if(mensaje === 'ñ'){
+    if(/[ñÑ]/.test(mensaje)){
         noResultado.classList.contains('no-visible') ? vacio() : ''
         txtEncriptar.value = ''
         return retorno = null
