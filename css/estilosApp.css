@@ -14,6 +14,8 @@
     --gray300:#868E96;
     --gray400:#495057;
     --gray500:#343A40;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 /*GENERALES*/
 html{    
@@ -34,17 +36,18 @@ body{
     width: 100vw;
     height: 100vh;
     background: var(--lightblue100);
-    color:var(--darkblue300);       
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    color:var(--darkblue300);
+    display: flex;
+    flex-direction: column;       
+    
 }
 .contenedor{
+    border: 1px solid;
     width: 100%;
     min-width: 318px;
     max-width: 1900px;
     margin: 0 auto;
-    /*height: calc(100% - 2.5rem);*/
-    max-height: 100%;
+    height: calc(100% - 15rem);
     padding: 5rem 5rem 3rem 5rem;
     display: flex;
     flex-wrap: nowrap;
@@ -180,29 +183,12 @@ main .seccionDos{
 
 /*FOOTER*/
 footer{
+    border: 1px dashed;
     font-family:monospace;
     font-weight: 100;
     width: 100%;
-    height: 2rem;
     text-align: center;
     line-height: 1.5;
-    position: fixed;
-    bottom: 0;
-}
-footer a{
-    border-top: 1px solid var(--lightblue300);
-    display: block;
-    color: var(--lightblue300);
-    font-size: 1.3rem;
-    margin: 0 auto;
-    text-decoration: none;
-    width: 50%;
-    transition: all 500ms;    
-}
-footer a:hover{
-    border-top: 1px solid #04fa8b;
-    color: #04fa8b;
-    transition: all 500ms;
 }
 /*FIN DEL FOOTER*/
 
